@@ -34,7 +34,7 @@ final class ArticlesViewModel: ObservableObject {
         
         self.isNewsLoading = true
         
-        ArticlesAPI.everythingGet(q: topic, from: "2020-01-01", sortBy: "publishedAt", apiKey: "fc743db938c646dc9e4be15868526bf7", page: self.page+1) { list, error in
+        ArticlesAPI.everythingGet(q: topic, from: "2020-04-01", sortBy: "publishedAt", apiKey: "b8292fe9971a4230902942e9fe51bd9e", page: self.page+1) { list, error in
             if let articles = list?.articles {
                 self.articles.append(contentsOf: articles)
                 self.isNewsLoading = false
